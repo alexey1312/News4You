@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>newsfeed cells count</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@totalAmount@</string>
+		<key>totalAmount</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>zero</key>
+			<string>No records</string>
+			<key>one</key>
+			<string>%d record</string>
+			<key>two</key>
+			<string>%d records</string>
+			<key>few</key>
+			<string>%d records</string>
+			<key>many</key>
+			<string>%d records</string>
+			<key>other</key>
+			<string>%d records</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pVJ-ns-sbc">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Newsfeed View Controller-->
+        <scene sceneID="CqO-YC-zbe">
+            <objects>
+                <viewController id="pVJ-ns-sbc" customClass="NewsfeedViewController" customModule="VKNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hiJ-74-Z33">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sH-rf-ORM" customClass="GradientView" customModule="VKNewsFeed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8WH-gS-ZIJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pVJ-ns-sbc" id="X8X-de-NLP"/>
+                                    <outlet property="delegate" destination="pVJ-ns-sbc" id="2rF-Xi-1Bh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7sH-rf-ORM" secondAttribute="bottom" id="8Kl-6v-4uZ"/>
+                            <constraint firstItem="8WH-gS-ZIJ" firstAttribute="leading" secondItem="JK0-ac-ZDz" secondAttribute="leading" id="9Rw-zK-bpA"/>
+                            <constraint firstItem="7sH-rf-ORM" firstAttribute="trailing" secondItem="JK0-ac-ZDz" secondAttribute="trailing" id="IT9-9z-DAc"/>
+                            <constraint firstItem="JK0-ac-ZDz" firstAttribute="trailing" secondItem="8WH-gS-ZIJ" secondAttribute="trailing" id="JDG-qe-KD9"/>
+                            <constraint firstItem="8WH-gS-ZIJ" firstAttribute="top" secondItem="hiJ-74-Z33" secondAttribute="top" id="PfF-l5-PWW"/>
+                            <constraint firstItem="7sH-rf-ORM" firstAttribute="top" secondItem="hiJ-74-Z33" secondAttribute="top" id="XOM-3g-Zjd"/>
+                            <constraint firstItem="8WH-gS-ZIJ" firstAttribute="bottom" secondItem="JK0-ac-ZDz" secondAttribute="bottom" constant="34" id="dIs-G9-jaR">
+                                <variation key="heightClass=regular" constant="0.0"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="34"/>
+                            </constraint>
+                            <constraint firstItem="7sH-rf-ORM" firstAttribute="leading" secondItem="JK0-ac-ZDz" secondAttribute="leading" id="osn-hv-Pct"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JK0-ac-ZDz"/>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="8WH-gS-ZIJ" id="NBr-lH-9LM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDC-aq-4Vr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527.536231884058" y="-225"/>
+        </scene>
+    </scenes>
+</document>
